@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arone Fritz Lamanilao - Web Stack Developer</title>
+    
+    <!-- Enhanced SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Arone Fritz Lamanilao">
+    <meta name="keywords" content="web developer, full stack developer, react.js, node.js, portfolio, web design, frontend, backend">
+    <meta name="description" content="Arone Fritz Lamanilao - Web Stack Developer specializing in React.js, Node.js, MongoDB, and PHP Laravel. Creating responsive and user-friendly web applications.">
+    
+    <!-- Performance Optimization -->
+    <link rel="preload" href="./assets/images/arone-removebg.png" as="image">
+    <link rel="preconnect" href="https://github-readme-stats.vercel.app">
+    <link rel="preconnect" href="https://github-readme-streak-stats.herokuapp.com">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://arone-fritz.dev">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Arone Fritz Lamanilao - Web Stack Developer">
+    <meta property="og:description" content="Web Stack Developer specializing in React.js, Node.js, MongoDB, and PHP Laravel. Creating responsive and user-friendly web applications.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arone-fritz.dev">
+    <meta property="og:image" content="https://arone-fritz.dev/assets/images/arone-removebg.png">
+    <meta property="og:site_name" content="Arone Fritz Lamanilao - Portfolio">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@arone_fritz">
+    <meta name="twitter:title" content="Arone Fritz Lamanilao - Web Stack Developer">
+    <meta name="twitter:description" content="Web Stack Developer specializing in React.js, Node.js, MongoDB, and PHP Laravel. Creating responsive and user-friendly web applications.">
+    <meta name="twitter:image" content="https://arone-fritz.dev/assets/images/arone-removebg.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/name-logo-black.svg">
+    
+    <link rel="stylesheet" href="font.css" />
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- Devicon Library for Skill Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    
+    <!-- Demo styles -->
+    <style>
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: #1788ae;
+      }
+
+      .swiper-pagination-bullet {
+        background-color: #23b9eb;
+      }
+    </style>
+    <style>
+      @keyframes gradientFlow {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      @keyframes nameWave {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+      }
+      .animated-name {
+        background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #ff6b6b);
+        background-size: 400% 400%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: 
+          gradientFlow 5s ease infinite,
+          nameWave 2s ease-in-out infinite alternate;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Add subtle shadow for contrast */
+        color: transparent; /* Ensure text is transparent */
+        -webkit-text-stroke: 0.5px rgba(255,255,255,0.2); /* Add thin outline */
+      }
+    </style>
+    <style>
+      @keyframes helloShift {
+        0%, 100% { transform: translateX(0) rotate(0deg); }
+        25% { transform: translateX(-5px) rotate(-2deg); }
+        75% { transform: translateX(5px) rotate(2deg); }
+      }
+      .animated-greeting {
+        background: linear-gradient(45deg, #4ecdc4, #45b7d1, #ff6b6b, #4ecdc4);
+        background-size: 400% 400%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: 
+          gradientFlow 5s ease infinite,
+          helloShift 3s ease-in-out infinite;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        color: transparent;
+        -webkit-text-stroke: 0.5px rgba(255,255,255,0.2);
+        margin-right: 10px;
+        display: inline-block;
+      }
+    </style>
+    
+    <!-- Particles.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="./matter.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.7.0/intersection-observer.js"></script>
+    <style>
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .animate-slide-in-left {
+            animation: slideInLeft 1s ease-out forwards;
+            opacity: 0;
+        }
+
+        .animate-slide-in-right {
+            animation: slideInRight 1s ease-out forwards;
+            opacity: 0;
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const animateOnScroll = (entries, observer) => {
+                entries.forEach(entry => {
+                    // Trigger animation when element is intersecting (both entering and leaving)
+                    const animationClass = entry.target.getAttribute('data-animation');
+                    if (animationClass) {
+                        if (entry.isIntersecting) {
+                            // Add animation class when entering viewport
+                            entry.target.classList.add(animationClass);
+                        } else {
+                            // Optional: Remove animation class when leaving viewport
+                            // This allows re-triggering when scrolling back
+                            entry.target.classList.remove(animationClass);
+                        }
+                    }
+                });
+            };
+
+            const observer = new IntersectionObserver(animateOnScroll, observerOptions);
+
+            // Select all sections to animate
+            const sectionsToAnimate = document.querySelectorAll('[data-animation]');
+            sectionsToAnimate.forEach(section => {
+                // Add initial state classes
+                section.classList.add('opacity-0', 'transform', 'transition-all', 'duration-1000', 'ease-out');
+                observer.observe(section);
+            });
+
+            // Additional scroll-based animation for child elements
+            const animateChildElements = () => {
+                const animatedSections = document.querySelectorAll('[data-animation]');
+                animatedSections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    const windowHeight = window.innerHeight;
+
+                    // Check if section is in viewport
+                    if (rect.top < windowHeight && rect.bottom >= 0) {
+                        // Animate child elements with staggered delays
+                        const childElements = section.querySelectorAll('[data-child-animation]');
+                        childElements.forEach((child, index) => {
+                            setTimeout(() => {
+                                child.classList.add('animate-slide-in-left');
+                            }, index * 200); // Stagger effect
+                        });
+                    }
+                });
+            };
+
+            // Add scroll event listener for continuous animations
+            window.addEventListener('scroll', animateChildElements);
+            animateChildElements(); // Initial call
+        });
+    </script>
+
+    
+
+    <!-- Similar updates for other sections -->
+    <section id="skillsSection" class="max-w-screen-xl mx-auto px-4 relative pb-8 sm:pb-16" data-animation="animate-fade-in">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div data-child-animation class="opacity-0">
+                <!-- Skill card content -->
+            </div>
+            <!-- More skill cards -->
+        </div>
+    </section>
+  </head>
+  <body class="bg-[#111] text-white font-['Nunito'] dark">
+    <!-- Header -->
+    <header class="header-container">
+        <div class="header-content">
+            <div class="flex items-center">
+                <img
+                    src="./assets/images/name-logo-black.svg"
+                    alt="Arone Fritz Logo"
+                    class="w-[40px] h-[40px] object-contain"
+                >
+            </div>
+            <nav class="flex items-center gap-4">
+                <button 
+                    id="latestWorksBtn"
+                    class="bg-[#1788ae] text-white px-4 py-2 rounded hover:bg-[#459bd5] transition-colors"
+                >
+                    Latest Works
+                </button>
+                <button 
+                    id="contactBtn"
+                    class="bg-[#1788ae] text-white px-4 py-2 rounded hover:bg-[#459bd5] transition-colors"
+                >
+                    Contact
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <!-- Matter.js Canvas -->
+            <div id="wrapper-canvas"></div>
+            
+            <div class="hero-content">
+                <div class="relative z-10">
+                    <h1 class="text-5xl md:text-[64px] font-['Spartan'] leading-none">
+                        <span class="animated-greeting block mb-6">Hello, I'm</span>
+                        <span class="animated-name block">Arone Fritz Lamanilao</span>
+                    </h1>
+                    <p class="font-['Merriweather'] italic my-4 md:my-8">
+                        Web Stack Developer
+                    </p>
+                    <button
+                        id="aboutMeBtn"
+                        class="bg-[#4595eb] py-2 px-5 rounded font-extrabold bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] relative hover:scale-110 ease-in-out duration-100"
+                        aria-haspopup="dialog"
+                        aria-controls="aboutMeModal"
+                    >
+                        About Me
+                    </button>
+                </div>
+                
+                <img
+                    src="./assets/images/arone-removebg.png"
+                    alt="Arone Fritz"
+                    class="hero-image"
+                />
+            </div>
+
+            <!-- Social Links -->
+            <ul class="social-links space-y-6 text-[#b0b2c3]">
+                <li>
+                    <a href="https://www.facebook.com/arone.lamanilao" target="_blank" rel="noopener noreferrer" aria-label="Facebook Profile">
+                        <svg
+                            class="w-7 hover:text-white"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                        >
+                            <path
+                                fill="currentColor"
+                                d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"
+                            ></path>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/arone.fritz" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile">
+                        <svg
+                            class="w-7 hover:text-white"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                        >
+                            <path
+                                fill="currentColor"
+                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                            ></path>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:fritzlamanilao30@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email Contact">
+                        <svg
+                            class="w-7 hover:text-white"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"
+                        >
+                            <path
+                                fill="currentColor"
+                                d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
+                            />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/@aronefritz" target="_blank" rel="noopener noreferrer" aria-label="YouTube Channel">
+                        <svg
+                            class="w-7 hover:text-white"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512"
+                            fill="currentColor"
+                        >
+                            <path
+                                d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
+                            ></path>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section id="latestWorksSection" class="max-w-screen-xl mx-auto px-4 relative pb-8 sm:pb-16" data-animation="animate-fade-in">
+            <h2 class="text-3xl sm:text-[40px] bg-[#111] relative z-10 font-bold px-4 py-2 w-max mx-auto text-center text-[#1788ae] sm:border-b-2 border-[#1788ae]">
+            Latest Works
+            </h2>
+            <div
+                class="flex flex-col sm:flex-row gap-4 mt-8 sm:gap-[80px] items-center sm:mt-20 relative"
+            >
+                <div
+                    class="h-[1px] left-1/4 right-1/2 bg-[#1788ae] absolute top-1/2 hidden sm:block"
+                ></div>
+                <div
+                    class="w-4 h-4 rounded-full border-[3px] border-[#459bd5] absolute left-1/2 -translate-x-1/2 bg-[#111] z-10 hover:scale-110 ease-in-out duration-100 hidden sm:block"
+                ></div>
+                <a
+                    href="https://real-estate-project.vercel.app"
+                    class="flex w-full relative justify-center sm:justify-start"
+                >
+                    <div
+                        class="flex flex-col items-center relative group sm:hover:scale-105 ease-in-out duration-200"
+                    >
+                        <img
+                            class="max-w-[400px] w-full mr-auto relative z-10 drop-shadow-[0_0px_60px_rgba(59,130,246,0.6)]"
+                            src="./assets/images/Screenshot 2025-01-19 125751.png"
+                            alt="Real Estate Project Screenshot"
+                        />
+                        <span
+                            class="flex group-hover:-top-14 ease-jump duration-200 bg-[#459bd5] sm:absolute left-1/2 sm:-translate-x-1/2 top-5 px-2 py-1 text-sm sm:text-base mt-2 rounded w-max items-center gap-1 after:hidden sm:after:block after:w-4 after:h-4 after:bg-inherit after:absolute after:left-1/2 after:-translate-x-1/2 after:rotate-45 after:-bottom-2"
+                            >Real Estate
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="feather feather-external-link"
+                            >
+                                <path
+                                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                                ></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+
+                <div class="w-full">
+                    <h3 class="text-[#459bd5] font-bold text-2xl md:text-4xl">Real Estate Platform</h3>
+                    <span class="text-[#459bd5] text-base md:text-lg">(Full Stack Project)</span>
+                    <p class="text-justify text-sm md:text-base mt-2">
+                        A modern real estate platform built with React.js, Node.js, and MongoDB. Features include property listings, 
+                        advanced search filters, user authentication, and a responsive design. Integrated with Google Maps API for 
+                        location services and real-time updates.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="bg-[#1788ae20] text-[#1788ae] px-2 py-1 rounded text-sm">React.js</span>
+                        <span class="bg-[#1788ae20] text-[#1788ae] px-2 py-1 rounded text-sm">Node.js</span>
+                        <span class="bg-[#1788ae20] text-[#1788ae] px-2 py-1 rounded text-sm">MongoDB</span>
+                        <span class="bg-[#1788ae20] text-[#1788ae] px-2 py-1 rounded text-sm">PHP Laravel</span>
+                        <span class="bg-[#1788ae20] text-[#1788ae] px-2 py-1 rounded text-sm">Google Maps API</span>
+                    </div>
+                    <div class="flex gap-4 mt-4">
+                        <a href="https://github.com/yourusername/real-estate-project" target="_blank" rel="noopener noreferrer" class="text-[#1788ae] hover:text-[#459bd5] flex items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.42 3.42 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.42 3.42 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            View Code
+                        </a>
+                        <a href="https://real-estate-project.vercel.app" target="_blank" rel="noopener noreferrer" class="text-[#1788ae] hover:text-[#459bd5] flex items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 mt-12 sm:gap-[80px] items-center sm:mt-20 relative">
+                <div
+                    class="w-full"
+                >
+                    <h3 class="text-[#ffe578] font-bold text-2xl md:text-4xl">E-commerce Platform</h3>
+                    <span class="text-[#ffe578] text-base md:text-lg">(Full Stack Project)</span>
+                    <p class="text-justify text-sm md:text-base mt-2">
+                        A modern e-commerce platform built with React.js and PHP Laravel. Features include product management,
+                        shopping cart functionality, user authentication, and a responsive admin dashboard. Integrated with
+                        Stripe for secure payments and real-time inventory management.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="bg-[#ffe57820] text-[#ffe578] px-2 py-1 rounded text-sm">React.js</span>
+                        <span class="bg-[#ffe57820] text-[#ffe578] px-2 py-1 rounded text-sm">PHP Laravel</span>
+                        <span class="bg-[#ffe57820] text-[#ffe578] px-2 py-1 rounded text-sm">MySQL</span>
+                        <span class="bg-[#ffe57820] text-[#ffe578] px-2 py-1 rounded text-sm">Stripe API</span>
+                        <span class="bg-[#ffe57820] text-[#ffe578] px-2 py-1 rounded text-sm">TailwindCSS</span>
+                    </div>
+                    <div class="flex gap-4 mt-4">
+                        <a href="https://github.com/yourusername/ecommerce-platform" target="_blank" rel="noopener noreferrer" class="text-[#ffe578] hover:text-[#fff5bf] flex items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.42 3.42 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.42 3.42 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            View Code
+                        </a>
+                        <a href="https://ecommerce-platform.vercel.app" target="_blank" rel="noopener noreferrer" class="text-[#ffe578] hover:text-[#fff5bf] flex items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Live Demo
+                        </a>
+                    </div>
+                </div>
+                <div class="h-[1px] left-1/2 right-1/4 bg-[#ffe578] absolute top-1/2 hidden sm:block"></div>
+                <div class="w-4 h-4 rounded-full border-[3px] border-[#ffe578] absolute left-1/2 -translate-x-1/2 bg-[#111] z-10 hover:scale-110 ease-in-out duration-100 hidden sm:block"></div>
+                <a href="https://ecommerce-platform.vercel.app" target="_blank" rel="noopener noreferrer" class="flex w-full relative justify-center sm:justify-start">
+                    <div class="flex flex-col items-center relative group sm:hover:scale-105 ease-in-out duration-200 sm:ml-auto">
+                        <img
+                            class="max-w-[400px] w-full mr-auto relative z-10 custom-yellow-shadow"
+                            src="./assets/images/Screenshot 2025-01-19 123854.png"
+                            alt="E-commerce Platform Screenshot"
+                        />
+                        <span class="flex group-hover:-top-14 ease-jump duration-200 bg-[#ffe578] text-black sm:absolute left-1/2 sm:-translate-x-1/2 top-5 px-2 py-1 text-sm sm:text-base mt-2 rounded w-max items-center gap-1 after:hidden sm:after:block after:w-4 after:h-4 after:bg-inherit after:absolute after:left-1/2 after:-translate-x-1/2 after:rotate-45 after:-bottom-2">
+                            E-commerce Platform
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+            </div>
+            <div
+                class="w-[2px] hidden sm:block bg-[#1788ae] absolute top-0 bottom-0 left-1/2 -translate-x-1/2"
+            ></div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skillsSection" class="max-w-screen-xl mx-auto px-4 relative pb-8 sm:pb-16" data-animation="animate-fade-in">
+            <h2 class="text-3xl sm:text-[40px] bg-[#111] relative z-10 font-bold px-4 py-2 w-max mx-auto text-center text-[#1788ae] sm:border-b-2 border-[#1788ae]">
+                Technical Skills
+            </h2>
+            
+            <div class="flex flex-col sm:flex-row gap-4 mt-8 sm:gap-[80px] items-center sm:mt-20 relative">
+                <div class="order-2 sm:order-1 w-full">
+                    <h3 class="text-[#ffe578] font-bold text-2xl md:text-4xl">Frontend Technologies</h3>
+                    <span class="text-[#459bd5] text-base md:text-lg">(Web Development)</span>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4">
+                        <div class="bg-[#1a1a1a] p-4 rounded-lg flex flex-col items-center justify-center">
+                            <i class="devicon-react-original colored text-4xl mb-2"></i>
+                            <h4 class="text-[#459bd5] text-sm font-semibold">React.js</h4>
+                        </div>
+                        <div class="bg-[#1a1a1a] p-4 rounded-lg flex flex-col items-center justify-center">
+                            <i class="devicon-javascript-plain colored text-4xl mb-2"></i>
+                            <h4 class="text-[#459bd5] text-sm font-semibold">JavaScript</h4>
+                        </div>
+                        <div class="bg-[#1a1a1a] p-4 rounded-lg flex flex-col items-center justify-center">
+                            <i class="devicon-html5-plain colored text-4xl mb-2"></i>
+                            <h4 class="text-[#459bd5] text-sm font-semibold">HTML5</h4>
+                        </div>
+                        <div class="bg-[#1a1a1a] p-4 rounded-lg flex flex-col items-center justify-center">
+                            <i class="devicon-css3-plain colored text-4xl mb-2"></i>
+                            <h4 class="text-[#459bd5] text-sm font-semibold">CSS3</h4>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="order-1 sm:order-2 flex w-full relative justify-center sm:justify-start">
+                    <div class="flex flex-col items-center relative group sm:hover:scale-105 ease-in-out duration-200 sm:ml-auto">
+                        <img 
+                            class="max-w-[400px] w-full relative z-10 drop-shadow-[0_0px_60px_rgba(89,229,120,0.3)]" 
+                            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" 
+                            alt="Frontend Technologies"
+                        />
+                    </div>
+                </a>
+                <div class="h-[1px] right-1/4 left-1/2 bg-[#1788ae] absolute top-1/2 hidden sm:block"></div>
+                <div class="w-4 h-4 rounded-full border-[3px] border-[#459bd5] absolute right-1/2 translate-x-1/2 bg-[#111] z-10 hover:scale-110 ease-in-out duration-100 hidden sm:block"></div>
+            </div>
+
+            <div class="w-[2px] hidden sm:block bg-[#1788ae] absolute top-0 bottom-0 left-1/2 -translate-x-1/2"></div>
+
+            <div class="flex flex-col sm:flex-row gap-4 mt-12 sm:gap-[80px] items-center sm:mt-20 relative">
+                <div class="w-full">
+                    <h3 class="text-[#ffe578] font-bold text-2xl md:text-4xl">Backend Technologies</h3>
+                    <span class="text-[#459bd5] text-base md:text-lg">(Server-Side Development)</span>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4">
+                        <div class="bg-[#1a1a1a] p-4 rounded-lg flex flex-col items-center justify-center">
+                            <i class="devicon-nodejs-plain colored text-4xl mb-2"></i>
+                            <h4 class="text-[#459bd5] text-sm font-semibold">Node.js</h4>
+                        </div>
+                        <div class="bg-[#1a1a1a] p-4 rounded-lg flex flex-col items-center justify-center">
+                            <i class="devicon-express-original colored text-4xl mb-2"></i>
+                            <h4 class="text-[#459bd5] text-sm font-semibold">Express.js</h4>
+                        </div>
+                        <div class="bg-[#1a1a1a] p-4 rounded-lg flex flex-col items-center justify-center">
+                            <i class="devicon-mongodb-plain colored text-4xl mb-2"></i>
+                            <h4 class="text-[#459bd5] text-sm font-semibold">MongoDB</h4>
+                        </div>
+                        <div class="bg-[#1a1a1a] p-4 rounded-lg flex flex-col items-center justify-center">
+                            <i class="devicon-php-plain colored text-4xl mb-2"></i>
+                            <h4 class="text-[#459bd5] text-sm font-semibold">PHP</h4>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="order-1 sm:order-2 flex w-full relative justify-center sm:justify-start">
+                    <div class="flex flex-col items-center relative group sm:hover:scale-105 ease-in-out duration-200 sm:ml-auto">
+                        <img 
+                        class="max-w-[400px] w-full relative z-10 drop-shadow-[0_0px_60px_rgba(120,229,229,0.3)]" 
+                            src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA&ixlib=rb-4.0.3&q=80&w=1080" 
+                            alt="Backend Technologies"
+                        />
+                    </div>
+                </a>
+                <div class="h-[1px] right-1/4 left-1/2 bg-[#1788ae] absolute top-1/2 hidden sm:block"></div>
+                <div class="w-4 h-4 rounded-full border-[3px] border-[#459bd5] absolute right-1/2 translate-x-1/2 bg-[#111] z-10 hover:scale-110 ease-in-out duration-100 hidden sm:block"></div>
+            </div>
+
+            <div class="w-[2px] hidden sm:block bg-[#1788ae] absolute top-0 bottom-0 left-1/2 -translate-x-1/2"></div>
+
+            <div class="flex flex-col sm:flex-row gap-4 mt-12 sm:gap-[80px] items-center sm:mt-20 relative">
+                <div class="order-2 sm:order-1 w-full">
+                    <h3 class="text-[#ffe578] font-bold text-2xl md:text-4xl">Programming Languages</h3>
+                    <span class="text-[#459bd5] text-base md:text-lg">(Coding Proficiency)</span>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4">
+                        <div class="bg-[#1a1a1a] p-4 rounded-lg flex flex-col items-center justify-center">
+                            <i class="devicon-python-plain colored text-4xl mb-2"></i>
+                            <h4 class="text-[#459bd5] text-sm font-semibold">Python</h4>
+                        </div>
+                        <div class="bg-[#1a1a1a] p-4 rounded-lg flex flex-col items-center justify-center">
+                            <i class="devicon-javascript-plain colored text-4xl mb-2"></i>
+                            <h4 class="text-[#459bd5] text-sm font-semibold">JavaScript</h4>
+                        </div>
+                        <div class="bg-[#1a1a1a] p-4 rounded-lg flex flex-col items-center justify-center">
+                            <i class="devicon-java-plain colored text-4xl mb-2"></i>
+                            <h4 class="text-[#459bd5] text-sm font-semibold">Java</h4>
+                        </div>
+                        <div class="bg-[#1a1a1a] p-4 rounded-lg flex flex-col items-center justify-center">
+                            <i class="devicon-typescript-plain colored text-4xl mb-2"></i>
+                            <h4 class="text-[#459bd5] text-sm font-semibold">TypeScript</h4>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="order-1 sm:order-2 flex w-full relative justify-center sm:justify-start">
+                    <div class="flex flex-col items-center relative group sm:hover:scale-105 ease-in-out duration-200 sm:ml-auto">
+                        <img 
+                            class="max-w-[400px] w-full relative z-10 drop-shadow-[0_0px_60px_rgba(120,229,229,0.3)]" 
+                            src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&q=80&w=1080" 
+                            alt="Programming Languages"
+                        />
+                    </div>
+                </a>
+                <div class="h-[1px] right-1/4 left-1/2 bg-[#1788ae] absolute top-1/2 hidden sm:block"></div>
+                <div class="w-4 h-4 rounded-full border-[3px] border-[#459bd5] absolute right-1/2 translate-x-1/2 bg-[#111] z-10 hover:scale-110 ease-in-out duration-100 hidden sm:block"></div>
+            </div>
+        </section>
+
+        <!-- Certifications and Achievements Section -->
+        <section id="achievementsSection" class="max-w-screen-xl mx-auto px-4 py-12 relative">
+            <h2 class="text-3xl sm:text-[40px] bg-[#111] relative z-10 font-bold px-4 py-2 w-max mx-auto text-center text-[#ffe578] sm:border-b-2 border-[#ffe578] mb-10">
+                Certifications & Achievements
+            </h2>
+            
+            <div class="certification-grid">
+                <div class="certification-card">
+                    <div class="card-header">
+                        <div class="card-icon w-12 h-12 bg-[#1788ae] rounded-full flex items-center justify-center">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-6 w-6 text-white"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                                ></path>
+                            </svg>
+                        </div>
+                        <div class="card-title">
+                            <h3 class="text-[#ffe578] font-bold text-xl">React.js Certification</h3>
+                            <p class="text-[#459bd5] text-sm">Online Learning Platform</p>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p class="text-gray-300 text-sm">Advanced React.js development certification demonstrating expertise in modern web application development.</p>
+                    </div>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="card-header">
+                        <div class="card-icon w-12 h-12 bg-[#459bd5] rounded-full flex items-center justify-center">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-6 w-6 text-white"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"
+                                />
+                            </svg>
+                        </div>
+                        <div class="card-title">
+                            <h3 class="text-[#ffe578] font-bold text-xl">Full Stack Certification</h3>
+                            <p class="text-[#459bd5] text-sm">Bootcamp Program</p>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p class="text-gray-300 text-sm">Comprehensive bootcamp covering end-to-end web development technologies.</p>
+                    </div>
+                </div>
+                
+                <!-- Add more certification cards as needed -->
+            </div>
+        </section>
+
+        <!-- Professional Experience Section -->
+        <section id="experienceSection" class="max-w-screen-xl mx-auto px-4 py-12 relative">
+            <h2 class="text-3xl sm:text-[40px] bg-[#111] relative z-10 font-bold px-4 py-2 w-max mx-auto text-center text-[#1788ae] sm:border-b-2 border-[#1788ae] mb-10">
+                Professional Experience
+            </h2>
+            
+            <div class="experience-timeline">
+                <div class="experience-card">
+                    <div class="card-header">
+                        <div class="job-title">
+                            <h3 class="text-[#ffe578] font-bold text-2xl">Senior Web Developer</h3>
+                            <p class="text-[#459bd5] text-sm">Full-Time Position</p>
+                        </div>
+                        <div class="job-period text-[#459bd5] text-sm">
+                            Jan 2024 - Present
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p class="text-gray-300 text-sm mb-3">Developing scalable web applications using modern technologies</p>
+                        <ul class="text-gray-300 text-sm list-disc pl-5 space-y-2">
+                            <li>Implemented responsive design principles</li>
+                            <li>Integrated RESTful APIs and optimized performance</li>
+                            <li>Collaborated with cross-functional teams</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="experience-card">
+                    <div class="card-header">
+                        <div class="job-title">
+                            <h3 class="text-[#ffe578] font-bold text-2xl">Junior Web Developer</h3>
+                            <p class="text-[#459bd5] text-sm">Entry-Level Position</p>
+                        </div>
+                        <div class="job-period text-[#459bd5] text-sm">
+                            Jun 2022 - Dec 2023
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p class="text-gray-300 text-sm mb-3">Supporting development of web applications</p>
+                        <ul class="text-gray-300 text-sm list-disc pl-5 space-y-2">
+                            <li>Developed responsive web interfaces</li>
+                            <li>Conducted code reviews</li>
+                            <li>Participated in agile methodologies</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Add more experience cards as needed -->
+            </div>
+        </section>
+
+        <!-- GitHub Contributions Section -->
+        <section id="githubSection" class="max-w-screen-xl mx-auto px-4 relative pb-8 sm:pb-16" data-animation="animate-fade-in">
+            <h2 class="text-3xl sm:text-[40px] bg-[#111] relative z-10 font-bold px-4 py-2 w-max mx-auto text-center text-[#1788ae] sm:border-b-2 border-[#1788ae]">
+                GitHub Contributions
+            </h2>
+            <div class="mt-10 bg-[#1a1a1a] p-6 rounded-lg">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <img src="https://github-readme-stats.vercel.app/api?username=Fritzkol&show_icons=true&theme=dark&hide_border=true" alt="GitHub Stats" class="w-full md:w-1/2">
+                    <img src="https://github-readme-streak-stats.herokuapp.com/?user=Fritzkol&theme=dark&hide_border=true" alt="GitHub Streak" class="w-full md:w-1/2">
+                </div>
+                <div class="text-center mt-6">
+                    <a href="https://github.com/Fritzkol" target="_blank" rel="noopener noreferrer" class="inline-block bg-[#1788ae] text-white px-6 py-3 rounded-lg hover:bg-[#459bd5] transition-colors">
+                        View GitHub Profile
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        
+
+        <section class="max-w-screen-xl mx-auto pb-12">
+            <h2
+                class="text-3xl sm:text-[40px] bg-[#111] sm:w-max relative z-10 font-bold px-4 py-2 mx-auto text-center text-[#1788ae] sm:border-2 border-[#1788ae] rounded-md"
+            >
+                Let's Connect
+            </h2>
+            <div class="flex flex-col md:flex-row items-center mt-10">
+                <div class="w-full">
+                    <img src="./assets/images/contact-me.svg" alt="phone" />
+                </div>
+                <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" class="w-full max-w-lg mx-auto">
+                    <!-- Web3Forms Access Key (hidden input) -->
+                    <input type="hidden" name="access_key" value="2d585e59-8900-4f4d-b942-9b459cebc4af">
+                    
+                    <!-- Success and Error redirect -->
+                    <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                    <input type="hidden" name="subject" value="New Contact Form Submission - Portfolio">
+                    <input type="hidden" name="from_name" value="Portfolio Contact Form">
+                    
+                    <!-- Honeypot to prevent spam -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                    
+                    <label
+                        for="name"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Name</label
+                    >
+                    <div class="relative mb-4">
+                        <div
+                            class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
+                        >
+                            <svg
+                                class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z"
+                                />
+                            </svg>
+                        </div>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                            aria-required="true"
+                            class="bg-gray-50 border-2 outline-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#1788ae] focus:border-[#1788ae] block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Enter your name"
+                        />
+                    </div>
+                    <label
+                        for="email"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Your Email</label
+                    >
+                    <div class="relative mb-4">
+                        <div
+                            class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
+                        >
+                            <svg
+                                class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="currentColor"
+                                viewBox="0 0 20 16"
+                            >
+                                <path
+                                    d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0018 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"
+                                />
+                                <path
+                                    d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"
+                                />
+                            </svg>
+                        </div>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            aria-required="true"
+                            class="bg-gray-50 border-2 outline-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#1788ae] focus:border-[#1788ae] block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="your.email@example.com"
+                        />
+                    </div>
+                    <label
+                        for="message"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Message</label
+                    >
+                    <div class="relative mb-4">
+                        <div
+                            class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
+                        ></div>
+                        <textarea
+                            id="message"
+                            name="message"
+                            required
+                            aria-required="true"
+                            rows="4"
+                            class="bg-gray-50 border-2 outline-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#1788ae] focus:border-[#1788ae] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Your message"
+                        ></textarea>
+                    </div>
+                    <div id="formFeedback" class="form-feedback hidden"></div>
+                    <button
+                        type="submit"
+                        class="bg-[#1788ae] text-white px-6 py-2 rounded hover:bg-[#459bd5] transition-colors relative z-10"
+                        aria-label="Send message"
+                    >
+                        Send
+                        <span class="loading-spinner hidden"></span>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="flex flex-col items-center pb-10">
+        <p class="text-xs text-gray-300">Arone Fritz Lamanilao 2025</p>
+        <div class="black-logo my-4 mx-auto mr-0 flex items-center justify-center">
+            <img
+                class="pointer-events-none w-[25px] h-[25px] object-contain"
+            >
+        </div>
+        <ul class="flex items-center gap-6 text-[#b0b2c3]">
+            <li>
+                <a href="https://www.facebook.com/arone.lamanilao" target="_blank" rel="noopener noreferrer" aria-label="Facebook Profile">
+                    <svg
+                        class="w-5 hover:text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                    >
+                        <path
+                            fill="currentColor"
+                            d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"
+                        ></path>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/arone.fritz" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile">
+                    <svg
+                        class="w-5 hover:text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                    >
+                        <path
+                            fill="currentColor"
+                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                        ></path>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:fritzlamanilao30@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email Contact">
+                    <svg
+                        class="w-5 hover:text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                    >
+                        <path
+                            fill="currentColor"
+                            d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
+                        />
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/@aronefritz" target="_blank" rel="noopener noreferrer" aria-label="YouTube Channel">
+                    <svg
+                        class="w-5 hover:text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 576 512"
+                        fill="currentColor"
+                    >
+                        <path
+                            d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
+                        ></path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    </main>
+
+    <!-- About Me Modal -->
+    <div 
+        id="aboutMeModal" 
+        class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50"
+        role="dialog"
+        aria-labelledby="modalTitle"
+        aria-modal="true"
+    >
+        <div 
+            class="bg-black p-8 rounded-lg max-w-2xl w-full mx-4 relative border-2 border-[#1788ae] modal-content"
+            tabindex="-1"
+        >
+            <button 
+                onclick="closeAboutModal()" 
+                class="absolute top-4 right-4 text-gray-400 hover:text-white"
+                aria-label="Close modal"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <h2 id="modalTitle" class="text-2xl font-bold mb-4 text-[#1788ae]">About Me</h2>
+            <div class="text-white space-y-4">
+                <p>Hi there! I'm Arone Fritz Lamanilao, a passionate Web Stack Developer with expertise in both front-end and back-end development.</p>
+                <p>I specialize in creating responsive, user-friendly web applications using modern technologies like:</p>
+                <ul class="list-disc list-inside ml-4 text-[#1788ae]">
+                    <li>React.js for dynamic front-end interfaces</li>
+                    <li>Node.js and Express.js for robust back-end systems</li>
+                    <li>MongoDB and Mongoose for efficient database management</li>
+                    <li>PHP Laravel for powerful web applications</li>
+                    <li>CSS and JavaScript for beautiful, interactive designs</li>
+                </ul>
+                <p>With a keen eye for design and a strong foundation in web development principles, I strive to create seamless, efficient, and engaging digital experiences.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.12.0/matter.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/matter-wrap@0.2.0/build/matter-wrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/matter-attractors@0.1.6/build/matter-attractors.min.js"></script>
+
+    <script>
+        // About Me Modal Functions with improved animation
+        function openAboutModal() {
+            const modal = document.getElementById('aboutMeModal');
+            const modalContent = modal.querySelector('.modal-content');
+            const closeButton = modal.querySelector('button[aria-label="Close modal"]');
+            
+            if (modal) {
+                // Remove hidden class first
+                modal.classList.remove('hidden');
+                
+                // Force reflow to ensure transition works
+                modal.offsetWidth;
+                
+                // Add active classes
+                modal.classList.add('flex');
+                requestAnimationFrame(() => {
+                    modal.classList.add('active');
+                });
+                
+                document.body.style.overflow = 'hidden';
+                
+                // Focus management
+                setTimeout(() => {
+                    closeButton.focus();
+                }, 100);
+                
+                // Trap focus within modal
+                modal.addEventListener('keydown', trapFocus);
+            }
+        }
+
+        function closeAboutModal() {
+            const modal = document.getElementById('aboutMeModal');
+            const aboutButton = document.getElementById('aboutMeBtn');
+            
+            if (modal) {
+                // Remove active class to trigger animation
+                modal.classList.remove('active');
+                
+                // Wait for animation to complete before hiding
+                modal.addEventListener('transitionend', function transitionEndHandler() {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                    modal.removeEventListener('transitionend', transitionEndHandler);
+                });
+                
+                document.body.style.overflow = 'auto';
+                
+                // Return focus to the button that opened the modal
+                aboutButton.focus();
+            }
+        }
+
+        function trapFocus(e) {
+            const modal = document.getElementById('aboutMeModal');
+            const focusableElements = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+            const firstFocusableElement = focusableElements[0];
+            const lastFocusableElement = focusableElements[focusableElements.length - 1];
+
+            if (e.key === 'Tab') {
+                if (e.shiftKey) {
+                    if (document.activeElement === firstFocusableElement) {
+                        lastFocusableElement.focus();
+                        e.preventDefault();
+                    }
+                } else {
+                    if (document.activeElement === lastFocusableElement) {
+                        firstFocusableElement.focus();
+                        e.preventDefault();
+                    }
+                }
+            }
+
+            // Close modal on Escape key
+            if (e.key === 'Escape') {
+                closeAboutModal();
+            }
+        }
+
+        // Event Listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            const aboutBtn = document.getElementById('aboutMeBtn');
+            const modal = document.getElementById('aboutMeModal');
+
+            if (aboutBtn) {
+                aboutBtn.addEventListener('click', openAboutModal);
+            }
+
+            if (modal) {
+                // Close modal when clicking outside
+                modal.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        closeAboutModal();
+                    }
+                });
+
+                // Close modal with Escape key
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                        closeAboutModal();
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script>
+        // Smooth scroll functionality for Latest Works button
+        document.addEventListener('DOMContentLoaded', function() {
+            const latestWorksButton = document.getElementById('latestWorksBtn');
+            const latestWorksSection = document.getElementById('latestWorksSection');
+
+            if (latestWorksButton && latestWorksSection) {
+                latestWorksButton.addEventListener('click', function() {
+                    const header = document.querySelector('.header-container');
+                    const headerHeight = header ? header.offsetHeight : 0;
+                    
+                    const sectionPosition = latestWorksSection.getBoundingClientRect().top + window.pageYOffset;
+                    
+                    window.scrollTo({
+                        top: sectionPosition - headerHeight,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
+    </script>
+
+    <script>
+    // Loading Screen
+    window.addEventListener('load', function() {
+        const loader = document.querySelector('.loader');
+        setTimeout(() => {
+            loader.classList.add('fade-out');
+            setTimeout(() => loader.remove(), 500);
+        }, 1000);
+    });
+
+    // Form Handling
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const form = this;
+        const submitButton = form.querySelector('button[type="submit"]');
+        const feedbackDiv = document.getElementById('formFeedback');
+        
+        // Validate form
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+        
+        // Show loading state
+        form.classList.add('form-loading');
+        submitButton.disabled = true;
+        submitButton.querySelector('.loading-spinner').classList.remove('hidden');
+        
+        try {
+            const formData = new FormData(form);
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData
+            });
+            
+            const data = await response.json();
+            
+            if (data.success) {
+                // Show success message
+                feedbackDiv.textContent = 'Message sent successfully!';
+                feedbackDiv.className = 'form-feedback success';
+                form.reset();
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            // Show error message
+            feedbackDiv.textContent = 'Failed to send message. Please try again.';
+            feedbackDiv.className = 'form-feedback error';
+        } finally {
+            // Reset loading state
+            form.classList.remove('form-loading');
+            submitButton.disabled = false;
+            submitButton.querySelector('.loading-spinner').classList.add('hidden');
+            feedbackDiv.classList.remove('hidden');
+        }
+    });
+    </script>
+
+    <script>
+        // Accessibility Enhancements
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add keyboard navigation hints
+            const focusableElements = document.querySelectorAll('a, button, input, select, textarea, [tabindex]');
+            focusableElements.forEach(el => {
+                el.addEventListener('focus', () => {
+                    el.classList.add('focused');
+                });
+                el.addEventListener('blur', () => {
+                    el.classList.remove('focused');
+                });
+            });
+
+            // Improve form labels and descriptions
+            const formElements = document.querySelectorAll('input, textarea, select');
+            formElements.forEach(el => {
+                if (!el.id) {
+                    el.id = `input-${Math.random().toString(36).substr(2, 9)}`;
+                }
+                
+                // Add aria-describedby if there's a description
+                const description = el.nextElementSibling;
+                if (description && description.classList.contains('input-description')) {
+                    description.id = `desc-${el.id}`;
+                    el.setAttribute('aria-describedby', description.id);
+                }
+            });
+        });
+    </script>
+    <script>
+        // Theme Toggle Script
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        if (themeToggle) {
+            themeToggle.addEventListener('click', function() {
+                body.classList.toggle('dark');
+                body.classList.toggle('light');
+            });
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add smooth scrolling to all links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        const header = document.querySelector('.header-container');
+                        const headerHeight = header ? header.offsetHeight : 0;
+                        
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                const header = document.querySelector('.header-container');
+                const headerHeight = header ? header.offsetHeight : 0;
+                
+                const sectionTop = section.offsetTop - headerHeight;
+                window.scrollTo({
+                    top: sectionTop,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Latest Works button scroll
+            document.getElementById('latestWorksBtn').addEventListener('click', function() {
+                const section = document.getElementById('latestWorksSection');
+                const header = document.querySelector('.header-container');
+                const headerHeight = header ? header.offsetHeight : 0;
+                
+                if (section) {
+                    const sectionPosition = section.getBoundingClientRect().top + window.pageYOffset;
+                    window.scrollTo({
+                        top: sectionPosition - headerHeight,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+
+            // Contact button scroll
+            document.getElementById('contactBtn').addEventListener('click', function() {
+                const section = document.getElementById('contactForm');
+                const header = document.querySelector('.header-container');
+                const headerHeight = header ? header.offsetHeight : 0;
+                
+                if (section) {
+                    const sectionPosition = section.getBoundingClientRect().top + window.pageYOffset;
+                    window.scrollTo({
+                        top: sectionPosition - headerHeight,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function debugLog(message) {
+                console.log(`[Scroll Debug] ${message}`);
+            }
+
+            function smoothScrollToSection(sectionId) {
+                debugLog(`Attempting to scroll to section: ${sectionId}`);
+
+                // Find the section
+                const section = document.getElementById(sectionId);
+                if (!section) {
+                    debugLog(`ERROR: Section with ID '${sectionId}' not found`);
+                    return;
+                }
+
+                // Detailed section information
+                debugLog(`Section details:`);
+                debugLog(`- offsetTop: ${section.offsetTop}`);
+                debugLog(`- offsetHeight: ${section.offsetHeight}`);
+                debugLog(`- getBoundingClientRect().top: ${section.getBoundingClientRect().top}`);
+
+                // Find the header
+                const header = document.querySelector('.header-container');
+                const headerHeight = header ? header.offsetHeight : 0;
+                debugLog(`Header height: ${headerHeight}px`);
+
+                // Multiple scroll methods
+                try {
+                    // Method 1: window.scrollTo
+                    const scrollPosition = section.offsetTop - headerHeight;
+                    debugLog(`Calculated scroll position: ${scrollPosition}px`);
+                    
+                    window.scrollTo({
+                        top: scrollPosition,
+                        behavior: 'smooth'
+                    });
+
+                    // Method 2: Fallback scrollIntoView
+                    setTimeout(() => {
+                        section.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }, 100);
+
+                } catch (error) {
+                    debugLog(`Scroll error: ${error.message}`);
+                }
+            }
+
+            // Latest Works button event listener
+            const latestWorksBtn = document.getElementById('latestWorksBtn');
+            const latestWorksSection = document.getElementById('latestWorksSection');
+
+            if (latestWorksBtn) {
+                debugLog('Latest Works button found');
+                latestWorksBtn.addEventListener('click', function() {
+                    debugLog('Latest Works button clicked');
+                    smoothScrollToSection('latestWorksSection');
+                });
+            } else {
+                debugLog('ERROR: Latest Works button not found');
+            }
+
+            if (latestWorksSection) {
+                debugLog('Latest Works section found');
+            } else {
+                debugLog('ERROR: Latest Works section not found');
+            }
+        });
+    </script>
+  </body>
+</html>
