@@ -352,15 +352,15 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.youtube.com/@aronefritz" target="_blank" rel="noopener noreferrer" aria-label="YouTube Channel">
+                    <a href="https://github.com/Fritzkol" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
                         <svg
                             class="w-7 hover:text-white"
                             xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 576 512"
+                            viewBox="0 0 24 24"
                             fill="currentColor"
                         >
                             <path
-                                d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
                             ></path>
                         </svg>
                     </a>
@@ -764,9 +764,7 @@
                 </div>
             </div>
         </section>
-
-        <!-- Testimonials Section -->
-        
+     
 
         <section class="max-w-screen-xl mx-auto pb-12">
             <h2
@@ -776,7 +774,12 @@
             </h2>
             <div class="flex flex-col md:flex-row items-center mt-10">
                 <div class="w-full">
-                    <img src="./assets/images/contact-me.svg" alt="phone" />
+                    <img 
+                        id="contact-image"
+                        src="./assets/images/contact-me.svg" 
+                        alt="phone" 
+                        class="transition-transform duration-300 ease-out"
+                    />
                 </div>
                 <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" class="w-full max-w-lg mx-auto">
                     <!-- Web3Forms Access Key (hidden input) -->
@@ -875,14 +878,14 @@
                         ></textarea>
                     </div>
                     <div id="formFeedback" class="form-feedback hidden"></div>
-                    <button
-                        type="submit"
-                        class="bg-[#1788ae] text-white px-6 py-2 rounded hover:bg-[#459bd5] transition-colors relative z-10"
-                        aria-label="Send message"
-                    >
-                        Send
-                        <span class="loading-spinner hidden"></span>
-                    </button>
+                    <div class="flex justify-center md:justify-start mt-6">
+                        <button 
+                            type="submit" 
+                            class="bg-[#1788ae] text-white px-8 py-3 rounded-lg hover:bg-[#459bd5] transition-colors duration-300 w-full md:w-auto text-center"
+                        >
+                            Send Message
+                        </button>
+                    </div>
                 </form>
             </div>
         </section>
@@ -1174,243 +1177,5 @@
             setTimeout(() => loader.remove(), 500);
         }, 1000);
     });
-
-    // Form Handling
-    document.getElementById('contactForm').addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        const form = this;
-        const submitButton = form.querySelector('button[type="submit"]');
-        const feedbackDiv = document.getElementById('formFeedback');
-        
-        // Validate form
-        if (!form.checkValidity()) {
-            form.reportValidity();
-            return;
-        }
-        
-        // Show loading state
-        form.classList.add('form-loading');
-        submitButton.disabled = true;
-        submitButton.querySelector('.loading-spinner').classList.remove('hidden');
-        
-        try {
-            const formData = new FormData(form);
-            const response = await fetch(form.action, {
-                method: 'POST',
-                body: formData
-            });
-            
-            const data = await response.json();
-            
-            if (data.success) {
-                // Show success message
-                feedbackDiv.textContent = 'Message sent successfully!';
-                feedbackDiv.className = 'form-feedback success';
-                form.reset();
-            } else {
-                throw new Error('Form submission failed');
-            }
-        } catch (error) {
-            // Show error message
-            feedbackDiv.textContent = 'Failed to send message. Please try again.';
-            feedbackDiv.className = 'form-feedback error';
-        } finally {
-            // Reset loading state
-            form.classList.remove('form-loading');
-            submitButton.disabled = false;
-            submitButton.querySelector('.loading-spinner').classList.add('hidden');
-            feedbackDiv.classList.remove('hidden');
-        }
-    });
-    </script>
-
-    <script>
-        // Accessibility Enhancements
-        document.addEventListener('DOMContentLoaded', () => {
-            // Add keyboard navigation hints
-            const focusableElements = document.querySelectorAll('a, button, input, select, textarea, [tabindex]');
-            focusableElements.forEach(el => {
-                el.addEventListener('focus', () => {
-                    el.classList.add('focused');
-                });
-                el.addEventListener('blur', () => {
-                    el.classList.remove('focused');
-                });
-            });
-
-            // Improve form labels and descriptions
-            const formElements = document.querySelectorAll('input, textarea, select');
-            formElements.forEach(el => {
-                if (!el.id) {
-                    el.id = `input-${Math.random().toString(36).substr(2, 9)}`;
-                }
-                
-                // Add aria-describedby if there's a description
-                const description = el.nextElementSibling;
-                if (description && description.classList.contains('input-description')) {
-                    description.id = `desc-${el.id}`;
-                    el.setAttribute('aria-describedby', description.id);
-                }
-            });
-        });
-    </script>
-    <script>
-        // Theme Toggle Script
-        const themeToggle = document.getElementById('themeToggle');
-        const body = document.body;
-
-        if (themeToggle) {
-            themeToggle.addEventListener('click', function() {
-                body.classList.toggle('dark');
-                body.classList.toggle('light');
-            });
-        }
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add smooth scrolling to all links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    
-                    if (targetElement) {
-                        const header = document.querySelector('.header-container');
-                        const headerHeight = header ? header.offsetHeight : 0;
-                        
-                        const elementPosition = targetElement.getBoundingClientRect().top;
-                        const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
-
-                        window.scrollTo({
-                            top: offsetPosition,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        });
-    </script>
-    <script>
-        function scrollToSection(sectionId) {
-            const section = document.getElementById(sectionId);
-            if (section) {
-                const header = document.querySelector('.header-container');
-                const headerHeight = header ? header.offsetHeight : 0;
-                
-                const sectionTop = section.offsetTop - headerHeight;
-                window.scrollTo({
-                    top: sectionTop,
-                    behavior: 'smooth'
-                });
-            }
-        }
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Latest Works button scroll
-            document.getElementById('latestWorksBtn').addEventListener('click', function() {
-                const section = document.getElementById('latestWorksSection');
-                const header = document.querySelector('.header-container');
-                const headerHeight = header ? header.offsetHeight : 0;
-                
-                if (section) {
-                    const sectionPosition = section.getBoundingClientRect().top + window.pageYOffset;
-                    window.scrollTo({
-                        top: sectionPosition - headerHeight,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-
-            // Contact button scroll
-            document.getElementById('contactBtn').addEventListener('click', function() {
-                const section = document.getElementById('contactForm');
-                const header = document.querySelector('.header-container');
-                const headerHeight = header ? header.offsetHeight : 0;
-                
-                if (section) {
-                    const sectionPosition = section.getBoundingClientRect().top + window.pageYOffset;
-                    window.scrollTo({
-                        top: sectionPosition - headerHeight,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            function debugLog(message) {
-                console.log(`[Scroll Debug] ${message}`);
-            }
-
-            function smoothScrollToSection(sectionId) {
-                debugLog(`Attempting to scroll to section: ${sectionId}`);
-
-                // Find the section
-                const section = document.getElementById(sectionId);
-                if (!section) {
-                    debugLog(`ERROR: Section with ID '${sectionId}' not found`);
-                    return;
-                }
-
-                // Detailed section information
-                debugLog(`Section details:`);
-                debugLog(`- offsetTop: ${section.offsetTop}`);
-                debugLog(`- offsetHeight: ${section.offsetHeight}`);
-                debugLog(`- getBoundingClientRect().top: ${section.getBoundingClientRect().top}`);
-
-                // Find the header
-                const header = document.querySelector('.header-container');
-                const headerHeight = header ? header.offsetHeight : 0;
-                debugLog(`Header height: ${headerHeight}px`);
-
-                // Multiple scroll methods
-                try {
-                    // Method 1: window.scrollTo
-                    const scrollPosition = section.offsetTop - headerHeight;
-                    debugLog(`Calculated scroll position: ${scrollPosition}px`);
-                    
-                    window.scrollTo({
-                        top: scrollPosition,
-                        behavior: 'smooth'
-                    });
-
-                    // Method 2: Fallback scrollIntoView
-                    setTimeout(() => {
-                        section.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }, 100);
-
-                } catch (error) {
-                    debugLog(`Scroll error: ${error.message}`);
-                }
-            }
-
-            // Latest Works button event listener
-            const latestWorksBtn = document.getElementById('latestWorksBtn');
-            const latestWorksSection = document.getElementById('latestWorksSection');
-
-            if (latestWorksBtn) {
-                debugLog('Latest Works button found');
-                latestWorksBtn.addEventListener('click', function() {
-                    debugLog('Latest Works button clicked');
-                    smoothScrollToSection('latestWorksSection');
-                });
-            } else {
-                debugLog('ERROR: Latest Works button not found');
-            }
-
-            if (latestWorksSection) {
-                debugLog('Latest Works section found');
-            } else {
-                debugLog('ERROR: Latest Works section not found');
-            }
-        });
-    </script>
   </body>
 </html>
